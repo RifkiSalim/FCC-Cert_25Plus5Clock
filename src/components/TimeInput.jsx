@@ -1,26 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { BiPlusCircle, BiMinusCircle } from "react-icons/bi";
 
-export const TimeInput = ({ type, onChange, defaultValue }) => {
-  const [value, setValue] = useState(defaultValue);
-
-  useEffect(() => {
-    onChange(value);
-  }, [value, onChange]);
-
-  const handleIncrement = () => {
-    setValue((prevState) => {
-      const newValue = prevState + 1;
-      return newValue > 60 ? 60 : newValue;
-    });
-  };
-  const handleDecrement = () => {
-    setValue((prevState) => {
-      const newValue = prevState - 1;
-      return newValue <= 0 ? 1 : newValue;
-    });
-  };
-
+export const TimeInput = ({
+  type,
+  value,
+  onIncrease,
+  onDecrease,
+  disabled,
+}) => {
   let labelId = "";
   let valueId = "";
   let inc = "";
@@ -45,28 +32,30 @@ export const TimeInput = ({ type, onChange, defaultValue }) => {
     }
   }
   return (
-    <div className="container p-2 flex flex-col items-center justify-center space-y-4">
-      <h3 className="text-3xl uppercase font-bold" id={labelId}>
+    <div className="container flex flex-col justify-center items-center p-2 space-y-4">
+      <h3 className="text-3xl font-bold uppercase" id={labelId}>
         {type}
       </h3>
       <div className="join bg-glass">
         <button
-          className="join-item btn btn-ghost"
-          onClick={handleDecrement}
-          id={inc}
+          className="join-item btn btn-ghost disabled:text-white"
+          disabled={disabled}
+          onClick={onDecrease}
+          id={dec}
         >
           <BiMinusCircle size={32} />
         </button>
         <span
-          className="join-item text-xl w-12 flex flex-col items-center justify-center"
+          className="flex flex-col justify-center items-center w-12 text-xl join-item"
           id={valueId}
         >
           {value}
         </span>
         <button
-          className="join-item btn btn-ghost"
-          onClick={handleIncrement}
-          id={dec}
+          className="join-item btn btn-ghost disabled:text-white"
+          disabled={disabled}
+          onClick={onIncrease}
+          id={inc}
         >
           <BiPlusCircle size={32} />
         </button>
