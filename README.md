@@ -57,4 +57,4 @@ Please consult [LICENSE.md](LICENSE.md) for information on how this project is l
 If you have any questions or suggestions, please feel free to contact me.
 
 Cheers!
-Your Name
+Rifki Salim
