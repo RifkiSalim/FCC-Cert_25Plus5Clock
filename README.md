@@ -2,27 +2,26 @@
 
 ## Overview
 
-The 25+5 Clock is a simple project that provides a timer with two adjustable periods: 25 minutes for work and 5 minutes for a short break. It's designed to assist with time management during work or study sessions. This project is inspired by the Pomodoro Technique and is aimed at enhancing productivity and focus during work or study sessions.
-
-### Features
-
-- **25-Minute Work Timer:** A timer that counts down from 25 minutes, allowing users to focus on work or study sessions.
-- **5-Minute Break Timer:** A timer that counts down from 5 minutes, providing a short break between work sessions.
-- **Adjustable Timers:** Users can increase or decrease the duration of both the work and break timers.
-- **Pause and Reset:** The ability to pause and reset the timer for better control and flexibility.
+This 25+5 Clock (also known as the Pomodoro Clock) is the final part of my entries to the FreeCodeCamp Front End Development Libraries Certification. It was designed to be simplistic, yet functionally similar to the [25+5 Clock Example](https://25--5-clock.freecodecamp.rocks/) provided by FCC.
 
 ### Stack
 
 - **Frontend Framework:** React
+- **Styling:** TailwindCSS with custom styles
+
+## Features
+
+- **Work Timer:** An adjustable timer that counts down from 25 minutes by default, allowing users to focus on work or study sessions.
+- **Break Timer:** A timer that counts down from 5 minutes by default, providing a short break between work sessions.
+- **Auto Timer Switching:** Timers automatically switch from Session to Break and vice versa.
+- **Pause and Reset:** The ability to pause and reset the timer for better control and flexibility.
 
 ## Usage
-
-To use the 25+5 Clock:
 
 1. Clone the repository to your local machine.
 
    ```bash
-   git clone https://github.com/your-username/25-plus-5-clock.git
+   git clonehttps://github.com/RifkiSalim/FCC-Cert_25Plus5Clock.git
    ```
 
 2. Navigate to the project folder.
@@ -47,9 +46,9 @@ To use the 25+5 Clock:
 
 ## Credits
 
-- Audio: [Pixabay](pixabay.com)
-- useInterval hook: [Dan Abramov](https://overreacted.io/making-setinterval-declarative-with-react-hooks/)
-- Inspiration for Logic and Problem Solving: [Steve Olson](https://codepen.io/stevepo74/pen/abNxvBM)
+- Audio: [Pixabay.com](https://pixabay.com)
+- Solution for User Story #18: [Aryan J](https://github.com/AryanJ-NYC/fcc-pomodoro-clock/tree/05-pass-tests-plus-tailwind-css)
+- Inspiration for certain parts of Timer Logic: [Steve Olson](https://codepen.io/stevepo74/pen/abNxvBM)
 
 ## License
 
