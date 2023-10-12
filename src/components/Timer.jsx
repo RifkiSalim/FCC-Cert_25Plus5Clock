@@ -1,7 +1,11 @@
+// React Imports
 import React from "react";
+
+// Icons
 import { BiPlayCircle, BiPauseCircle, BiReset } from "react-icons/bi";
 
 export const Timer = ({ isRunning, timeLeft, text, onClick, onResetClick }) => {
+  // Function to format time to mm:ss
   const formatTime = () => {
     let minutes = Math.floor(timeLeft / 60);
     let seconds = timeLeft - minutes * 60;
@@ -15,18 +19,22 @@ export const Timer = ({ isRunning, timeLeft, text, onClick, onResetClick }) => {
 
     return `${minutes}:${seconds}`;
   };
+
   return (
     <div className="flex flex-col justify-center items-center px-12 py-4 space-y-2 text-gray-100 lg:px-20 bg-glass">
       <div className="p-2">
+        {/* Timer Text */}
         <h2 className="text-2xl uppercase lg:text-3xl" id="timer-label">
           {text}
         </h2>
+        {/* Time Left */}
         <div className="text-5xl lg:text-7xl" id="time-left">
           <h2>{formatTime(timeLeft)}</h2>
         </div>
       </div>
       <div className="divider divider-vertical before:bg-gray-100 after:bg-gray-100"></div>
       <div className="flex flex-row p-2">
+        {/* Start/Stop Button */}
         <button
           className="btn btn-ghost"
           id="start_stop"
@@ -35,6 +43,7 @@ export const Timer = ({ isRunning, timeLeft, text, onClick, onResetClick }) => {
           {isRunning ? <BiPauseCircle size={42} /> : <BiPlayCircle size={42} />}
         </button>
         <div className="divider divider-horizontal before:bg-gray-100 after:bg-gray-100"></div>
+        {/* Reset Button */}
         <button
           className="btn btn-ghost"
           id="reset"
