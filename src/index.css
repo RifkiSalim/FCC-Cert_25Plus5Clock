@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-glass {
+  @apply bg-white bg-opacity-20 rounded-md backdrop-blur shadow-lg border-white border-opacity-25 border
+}
+
