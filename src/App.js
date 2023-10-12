@@ -1,8 +1,14 @@
+// React Imports
 import React, { useRef, useState, useEffect } from "react";
-import StepsBG from "./assets/bg-steps.svg";
+
+// Custom Components
 import { TimeInput } from "./components/TimeInput";
 import { Timer } from "./components/Timer";
+
+// Assets
+import StepsBG from "./assets/bg-steps.svg";
 import BeepFX from "./assets/alarm-beep.mp3";
+
 const App = () => {
   // Settings States
   const [sessionLength, setSessionLength] = useState(25);
